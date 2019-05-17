@@ -1,5 +1,6 @@
 Feature: Manage todo list
 
+  @excluded
   Scenario: Add todo item
     Given I have the todo list
       | Label             |
@@ -9,6 +10,7 @@ Feature: Manage todo list
     Then I expect the todo list to have 2 items
     And I expect to see the todo item "Prepare dinner" in the todo list
 
+  @excluded
   Scenario: Delete todo item
     Given I have the todo list
       | Label             |

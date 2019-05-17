@@ -1,5 +1,8 @@
 const { defineFeature, loadFeature } = require("jest-cucumber");
-const feature = loadFeature("./test/features/manage-todo-list.feature");
+const feature = loadFeature("./test/features/manage-todo-list.feature",
+{
+  tagFilter: '@included and not @excluded'
+});
 
 const PAGE = "http://todomvc.com/examples/react/#/";
 const ENTER_EVENT = "Enter";
